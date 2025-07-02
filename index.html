@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Scheduler</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📅 Task Scheduler</h1>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('homework')">Homework</button>
+      <button class="tab" onclick="switchTab('routine')">Routine</button>
+    </div>
+
+    <!-- Homework Tab -->
+    <div class="tab-content" id="homeworkTab">
+      <div class="form">
+        <input type="text" id="homeworkInput" placeholder="Homework task..." />
+        <input type="date" id="homeworkDate" />
+        <button onclick="addHomework()">Add</button>
+      </div>
+      <ul id="homeworkList"></ul>
+    </div>
+
+    <!-- Routine Tab -->
+    <div class="tab-content hidden" id="routineTab">
+      <div class="form">
+        <input type="text" id="routineInput" placeholder="Routine task..." />
+        <input type="time" id="routineTime" />
+        <button onclick="addRoutine()">Add</button>
+      </div>
+      <ul id="routineList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
